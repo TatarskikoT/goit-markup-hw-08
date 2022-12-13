@@ -1,0 +1,31 @@
+img {
+  display: block;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+  font-style: normal;
+  color: inherit;
+  transition-property: color, background-color, box-shadow, transform;
+  transition: color var(--std-timing) var(--std-time-func),
+    background-color var(--std-timing) var(--std-time-func),
+    box-shadow var(--std-timing) var(--std-time-func),
+    transform var(--std-timing) var(--std-time-func);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+.text {
+  margin: 0;
+}
