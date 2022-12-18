@@ -4,8 +4,12 @@
   transform: translate(-50%, -50%) scale(1);
 }
 .modal {
-  margin-top: 94px;
-  position: relative;
+  position: absolute;
+  top: 94px;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+
+  width: 450px;
   padding: 40px;
   transition-property: transform, box-shadow;
   transition: transform var(--std-timing) var(--std-time-func),
@@ -17,11 +21,7 @@
   border-radius: 4px;
 
   @media screen and (min-width: 768px) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    max-width: 450px;
-    transform: translate(-50%, -50%) scale(1);
+    top: 15%;
   }
 
   @media screen and (min-width: 1200px) {
