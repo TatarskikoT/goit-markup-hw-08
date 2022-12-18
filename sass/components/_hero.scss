@@ -5,16 +5,18 @@
   background-color: #2f303a;
   text-align: center;
 }
-.hero__text {
-  padding-top: 200px;
-  padding-bottom: 200px;
-}
+// .hero__text {
+//   padding-top: 200px;
+//   padding-bottom: 200px;
+// }
 .hero__title {
+  // display: block;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 30px;
+  padding-top: 200px;
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
