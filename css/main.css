@@ -7,6 +7,7 @@
   --secondary-white-color: #f5f4fa;
   --primary-grey-color: #eeeeee;
   --std-timing: 250ms;
+  --long-timing: 1s;
   --std-time-func: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -267,6 +268,10 @@ body {
   background-color: var(--primary-white-color);
 }
 
+.menu-container.is-open body {
+  overflow: hidden;
+}
+
 img {
   display: block;
 }
@@ -381,14 +386,15 @@ p {
 }
 
 .menu-container {
-  position: absolute;
-  top: 0;
-  right: -100%;
-  overflow: hidden;
+  display: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .menu-container.is-open {
-  position: fixed;
+  display: block;
+  overflow: scroll;
+  position: absolute;
   top: 0;
   right: 0;
   width: 100vw;
@@ -398,12 +404,16 @@ p {
   padding-top: 48px;
   padding-bottom: 48px;
   background-color: var(--primary-white-color);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
-  -webkit-transition: var(--std-timing) var(--std-time-func);
-  transition: var(--std-timing) var(--std-time-func);
+  -webkit-transition: -webkit-transform var(--long-timing) var(--std-time-func);
+  transition: -webkit-transform var(--long-timing) var(--std-time-func);
+  transition: transform var(--long-timing) var(--std-time-func);
+  transition: transform var(--long-timing) var(--std-time-func), -webkit-transform var(--long-timing) var(--std-time-func);
 }
 
 .mobile-menu__item:not(:last-child) {

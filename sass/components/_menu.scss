@@ -1,11 +1,15 @@
 .menu-container {
-  position: absolute;
-  top: 0;
-  right: -100%;
-  overflow: hidden;
+  display: none;
+  transform: scale(0);
+  // position: absolute;
+  // // top: 0;
+  // // right: -100%;
+  // // overflow: hidden;
 }
 .menu-container.is-open {
-  position: fixed;
+  display: block;
+  overflow: scroll;
+  position: absolute;
   top: 0;
   right: 0;
   width: 100vw;
@@ -15,8 +19,9 @@
   padding-top: 48px;
   padding-bottom: 48px;
   background-color: var(--primary-white-color);
+  transform: scale(1);
   transition-property: transform;
-  transition: var(--std-timing) var(--std-time-func);
+  transition: transform var(--long-timing) var(--std-time-func);
 }
 .mobile-menu__item:not(:last-child) {
   margin-bottom: 32px;
