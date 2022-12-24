@@ -17,39 +17,46 @@
     <header class="header">
       <div class="container header__container">
         <a class="logo" href="">Web<span class="logo--dark">Studio</span></a>
-        <nav class="nav">
-          <ul class="nav__list list">
-            <li class="nav__item">
-              <a href="./index.html" class="link nav__link">Студія</a>
-            </li>
-            <li class="nav__item">
-              <a href="./portfolio.html" class="link nav__link current"
-                >Портфоліо</a
+        <button type="button" class="menu__button js-open-menu">
+          <svg class="menu__icon">
+            <use class="menu" href="./images/icons/icons.svg#menu"></use>
+          </svg>
+        </button>
+        <div class="menu-nav">
+          <nav class="nav">
+            <ul class="nav__list list">
+              <li class="nav__item">
+                <a href="./index.html" class="link nav__link">Студія</a>
+              </li>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="link nav__link current"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="" class="link nav__link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="list header__contacts">
+            <li class="header__item">
+              <a href="mailto:info@devstudio.com" class="link header__link">
+                <svg class="envelope">
+                  <use href="./images/icons/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="nav__item">
-              <a href="" class="link nav__link">Контакти</a>
+            <li class="header__item">
+              <a href="tel:+380961111111" class="link header__link">
+                <svg class="smartphone">
+                  <use href="./images/icons/icons.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="list header__contacts">
-          <li class="header__item">
-            <a href="mailto:info@devstudio.com" class="link header__link">
-              <svg class="envelope">
-                <use href="./images/icons/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="header__item">
-            <a href="tel:+380961111111" class="link header__link">
-              <svg class="smartphone">
-                <use href="./images/icons/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -468,5 +475,74 @@
         </div>
       </div>
     </footer>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <ul class="mobile-menu list">
+        <li class="mobile-menu__item">
+          <a href="./index.html" class="link mobile-menu__link">Студія</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a href="./portfolio.html" class="link mobile-menu__link current"
+            >Портфоліо</a
+          >
+        </li>
+        <li class="mobile-menu__item">
+          <a href="" class="link mobile-menu__link">Контакти</a>
+        </li>
+      </ul>
+      <ul class="mobile-menu__contacts list">
+        <li class="item tel">
+          <a href="tel:+380961111111" class="link"> +38 096 111 11 11</a>
+        </li>
+        <li class="item mail">
+          <a href="mailto:info@devstudio.com" class="link">
+            info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="mobile-menu__socials list">
+        <li class="item">
+          <a
+            href=""
+            class="link"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            >Instagram</a
+          >
+        </li>
+        <li class="item">
+          <a
+            href=""
+            class="link"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            >Twitter</a
+          >
+        </li>
+        <li class="item">
+          <a
+            href=""
+            class="link"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            >Facebook</a
+          >
+        </li>
+        <li class="item">
+          <a
+            href=""
+            class="link"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            >Linkedin</a
+          >
+        </li>
+      </ul>
+      <button type="button" class="close-menu js-close-menu">
+        <svg class="cross">
+          <use class="cross" href="./images/icons/icons.svg#cross"></use>
+        </svg>
+      </button>
+    </div>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
