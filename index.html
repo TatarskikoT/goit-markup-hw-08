@@ -209,14 +209,48 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="list cardset">
             <li class="team__card">
-              <img
-                src="./images/ihor.jpg"
-                alt="Фото учасника"
-                width="100%"
-                height="auto"
-                class="team__member-pic"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/img_270.webp 270w
+                    ./images/team/img_540.webp 540w"
+                  type="image/webp"
+                />
+                <source
+                  media="(768px)"
+                  srcset="
+                    ./images/team/img_354.webp 354w,
+                    ./images/team/img_708.webp 708w
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(480px)"
+                  srcset="
+                    ./images/team/img_450.webp 450w,
+                    ./images/team/img_900.webp 900w
+                  "
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./images/team/img_270.jpg 270w,
+                    ./images/team/img_354.jpg 354w,
+                    ./images/team/img_450.jpg 450w,
+                    ./images/team/img_540.jpg 540w,
+                    ./images/team/img_708.jpg 708w,
+                    ./images/team/img_900.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 270px , (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  src="./images/team/img_270.jpg"
+                  alt="Фото учасника"
+                  width="100%"
+                  height="auto"
+                  class="team__member-pic"
+                  loading="lazy"
+                />
+              </picture>
               <h3 class="team__subtitle">Ігор Дем'яненко</h3>
               <p lang="en" class="team__text">Product Designer</p>
               <ul class="list socials">
@@ -271,13 +305,48 @@
               </ul>
             </li>
             <li class="team__card">
-              <img
-                src="./images/olha.jpg"
-                alt="Фото учасника"
-                width="100%"
-                class="team__member-pic"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/img_270-1.webp 270w
+                    ./images/team/img_540-1.webp 540w"
+                  type="image/webp"
+                />
+                <source
+                  media="(768px)"
+                  srcset="
+                    ./images/team/img_354-1.webp 354w,
+                    ./images/team/img_708-1.webp 708w
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(480px)"
+                  srcset="
+                    ./images/team/img_450-1.webp 450w,
+                    ./images/team/img_900-1.webp 900w
+                  "
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./images/team/img_270-1.jpg 270w,
+                    ./images/team/img_354-1.jpg 354w,
+                    ./images/team/img_450-1.jpg 450w,
+                    ./images/team/img_540-1.jpg 540w,
+                    ./images/team/img_708-1.jpg 708w,
+                    ./images/team/img_900-1.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 270px , (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  src="./images/team/img_270-1.jpg"
+                  alt="Фото учасника"
+                  width="100%"
+                  height="auto"
+                  class="team__member-pic"
+                  loading="lazy"
+                />
+              </picture>
               <h3 class="team__subtitle">Ольга Рєпіна</h3>
               <p lang="en" class="team__text">Frontend Developer</p>
               <ul class="list socials">
@@ -332,13 +401,48 @@
               </ul>
             </li>
             <li class="team__card">
-              <img
-                src="./images/mykola.jpg"
-                alt="Фото учасника"
-                width="100%"
-                class="team__member-pic"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/img_270-2.webp 270w
+                    ./images/team/img_540-2.webp 540w"
+                  type="image/webp"
+                />
+                <source
+                  media="(768px)"
+                  srcset="
+                    ./images/team/img_354-2.webp 354w,
+                    ./images/team/img_708-2.webp 708w
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(480px)"
+                  srcset="
+                    ./images/team/img_450-2.webp 450w,
+                    ./images/team/img_900-2.webp 900w
+                  "
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./images/team/img_270-2.jpg 270w,
+                    ./images/team/img_354-2.jpg 354w,
+                    ./images/team/img_450-2.jpg 450w,
+                    ./images/team/img_540-2.jpg 540w,
+                    ./images/team/img_708-2.jpg 708w,
+                    ./images/team/img_900-2.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 270px , (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  src="./images/team/img_270-2.jpg"
+                  alt="Фото учасника"
+                  width="100%"
+                  height="auto"
+                  class="team__member-pic"
+                  loading="lazy"
+                />
+              </picture>
               <h3 class="team__subtitle">Микола Тарасов</h3>
               <p lang="en" class="team__text">Marketing</p>
               <ul class="list socials">
@@ -393,13 +497,48 @@
               </ul>
             </li>
             <li class="team__card">
-              <img
-                src="./images/mykhailo.jpg"
-                alt="Фото учасника"
-                width="100%"
-                class="team__member-pic"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/img_270-3.webp 270w
+                    ./images/team/img_540-3.webp 540w"
+                  type="image/webp"
+                />
+                <source
+                  media="(768px)"
+                  srcset="
+                    ./images/team/img_354-3.webp 354w,
+                    ./images/team/img_708-3.webp 708w
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(480px)"
+                  srcset="
+                    ./images/team/img_450-3.webp 450w,
+                    ./images/team/img_900-3.webp 900w
+                  "
+                  type="image/webp"
+                />
+                <img
+                  srcset="
+                    ./images/team/img_270-3.jpg 270w,
+                    ./images/team/img_354-3.jpg 354w,
+                    ./images/team/img_450-3.jpg 450w,
+                    ./images/team/img_540-3.jpg 540w,
+                    ./images/team/img_708-3.jpg 708w,
+                    ./images/team/img_900-3.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 270px , (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                  src="./images/team/img_270-3.jpg"
+                  alt="Фото учасника"
+                  width="100%"
+                  height="auto"
+                  class="team__member-pic"
+                  loading="lazy"
+                />
+              </picture>
               <h3 class="team__subtitle">Михайло Єрмаков</h3>
               <p lang="en" class="team__text">UI Designer</p>
               <ul class="list socials">
