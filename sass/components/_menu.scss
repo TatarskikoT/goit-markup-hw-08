@@ -61,15 +61,23 @@
 }
 .mobile-menu__socials {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  margin: -10px;
   color: var(--accent-color);
 }
 .mms-item {
   display: block;
   position: relative;
-  font-size: 18px;
+  margin: 10px;
+  width: calc((100% - 8 * 10px) / 4);
+  min-width: 82px;
+  text-align: center;
   line-height: calc(22 / 18);
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
+  }
 }
 .mms-item:not(:last-child)::after {
   content: "";
