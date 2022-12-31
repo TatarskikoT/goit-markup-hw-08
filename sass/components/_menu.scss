@@ -72,14 +72,17 @@
   position: relative;
   margin: 10px;
   width: calc((100% - 8 * 10px) / 4);
-  min-width: 82px;
+  min-width: 85px;
   text-align: center;
   line-height: calc(22 / 18);
   @media screen and (min-width: 480px) {
     font-size: 18px;
   }
+  @media screen and (max-width: 479.9px) {
+    width: calc((100% - 4 * 10px) / 2);
+  }
 }
-.mms-item:not(:last-child)::after {
+.mms-item:not(:nth-child(even))::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -88,4 +91,17 @@
   height: 1px;
   width: 22px;
   transform: rotate(90deg);
+}
+
+@media screen and (min-width: 480px) {
+  .mms-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    background-color: rgba(33, 33, 33, 0.2);
+    height: 1px;
+    width: 22px;
+    transform: rotate(90deg);
+  }
 }
