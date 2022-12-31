@@ -72,13 +72,13 @@
   position: relative;
   margin: 10px;
   width: calc((100% - 8 * 10px) / 4);
-  min-width: 85px;
+  min-width: 60px;
   text-align: center;
   line-height: calc(22 / 18);
   @media screen and (min-width: 480px) {
     font-size: 18px;
   }
-  @media screen and (max-width: 479.9px) {
+  @media screen and (max-width: 379.9px) {
     width: calc((100% - 4 * 10px) / 2);
   }
 }
