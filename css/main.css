@@ -510,7 +510,7 @@ p {
           transform: rotate(90deg);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 380px) {
   .mms-item:not(:last-child)::after {
     content: "";
     position: absolute;

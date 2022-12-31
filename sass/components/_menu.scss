@@ -79,6 +79,7 @@
     width: calc((100% - 4 * 10px) / 2);
   }
 }
+
 .mms-item:not(:nth-child(even))::after {
   content: "";
   position: absolute;
@@ -90,7 +91,7 @@
   transform: rotate(90deg);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 380px) {
   .mms-item:not(:last-child)::after {
     content: "";
     position: absolute;
