@@ -267,6 +267,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   background-color: var(--primary-white-color);
+  overflow-x: hidden;
 }
 
 .menu-container.is-open body {
@@ -385,9 +386,20 @@ p {
 }
 
 .menu-container {
-  display: none;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  position: absolute;
+  top: 48px;
+  right: -120%;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition: var(--long-timing) var(--std-time-func), -webkit-transform var(--long-timing) var(--std-time-func);
+  transition: var(--long-timing) var(--std-time-func), -webkit-transform var(--long-timing) var(--std-time-func);
+  transition: transform var(--long-timing) var(--std-time-func), var(--long-timing) var(--std-time-func);
+  transition: transform var(--long-timing) var(--std-time-func), var(--long-timing) var(--std-time-func), -webkit-transform var(--long-timing) var(--std-time-func);
 }
 
 .menu-container.is-open {
@@ -396,23 +408,11 @@ p {
   position: absolute;
   top: 0;
   right: 0;
-  width: 100vw;
-  height: 100vh;
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 48px;
   padding-bottom: 48px;
   background-color: var(--primary-white-color);
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition: -webkit-transform var(--long-timing) var(--std-time-func);
-  transition: -webkit-transform var(--long-timing) var(--std-time-func);
-  transition: transform var(--long-timing) var(--std-time-func);
-  transition: transform var(--long-timing) var(--std-time-func), -webkit-transform var(--long-timing) var(--std-time-func);
 }
 
 .mobile-menu__item:not(:last-child) {
