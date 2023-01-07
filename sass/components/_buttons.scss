@@ -8,7 +8,8 @@
   border-radius: 4px;
   border-color: transparent;
   transition-property: color, background-color, box-shadow;
-  transition: background-color var(--std-timing) var(--std-time-func),
+  transition: color var(--std-timing) var(--std-time-func),
+    background-color var(--std-timing) var(--std-time-func),
     box-shadow var(--std-timing) var(--std-time-func);
 
   &:hover,

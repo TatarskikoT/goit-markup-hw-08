@@ -55,13 +55,15 @@
 .mobile-menu__contacts .item:nth-child(2) {
   margin-bottom: 64px;
 }
-.item.tel {
+.tel .link {
   font-size: 34px;
+  font-weight: 500;
   line-height: calc(40 / 34);
   color: var(--accent-color);
 }
-.item.mail {
+.mail .link {
   font-size: 24px;
+  font-weight: 500;
   line-height: calc(28 / 24);
 }
 .mobile-menu__socials {

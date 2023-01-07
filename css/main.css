@@ -451,14 +451,16 @@ p {
   margin-bottom: 64px;
 }
 
-.item.tel {
+.tel .link {
   font-size: 34px;
+  font-weight: 500;
   line-height: 1.1764705882;
   color: var(--accent-color);
 }
 
-.item.mail {
+.mail .link {
   font-size: 24px;
+  font-weight: 500;
   line-height: 1.1666666667;
 }
 
@@ -740,9 +742,17 @@ p {
 }
 
 .hero__overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: 100%;
-  padding-top: 118px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -779,11 +789,6 @@ p {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-desktop.img@2x.jpg);
   }
 }
-@media screen and (min-width: 1200px) {
-  .hero__overlay {
-    padding-top: 200px;
-  }
-}
 
 .button {
   display: inline-block;
@@ -797,10 +802,10 @@ p {
   transition-property: color, background-color, -webkit-box-shadow;
   transition-property: color, background-color, box-shadow;
   transition-property: color, background-color, box-shadow, -webkit-box-shadow;
-  -webkit-transition: background-color var(--std-timing) var(--std-time-func), -webkit-box-shadow var(--std-timing) var(--std-time-func);
-  transition: background-color var(--std-timing) var(--std-time-func), -webkit-box-shadow var(--std-timing) var(--std-time-func);
-  transition: background-color var(--std-timing) var(--std-time-func), box-shadow var(--std-timing) var(--std-time-func);
-  transition: background-color var(--std-timing) var(--std-time-func), box-shadow var(--std-timing) var(--std-time-func), -webkit-box-shadow var(--std-timing) var(--std-time-func);
+  -webkit-transition: color var(--std-timing) var(--std-time-func), background-color var(--std-timing) var(--std-time-func), -webkit-box-shadow var(--std-timing) var(--std-time-func);
+  transition: color var(--std-timing) var(--std-time-func), background-color var(--std-timing) var(--std-time-func), -webkit-box-shadow var(--std-timing) var(--std-time-func);
+  transition: color var(--std-timing) var(--std-time-func), background-color var(--std-timing) var(--std-time-func), box-shadow var(--std-timing) var(--std-time-func);
+  transition: color var(--std-timing) var(--std-time-func), background-color var(--std-timing) var(--std-time-func), box-shadow var(--std-timing) var(--std-time-func), -webkit-box-shadow var(--std-timing) var(--std-time-func);
 }
 .button:hover, .button:focus {
   color: var(--primary-white-color);
@@ -1465,6 +1470,8 @@ textarea {
 }
 
 .projects__link {
+  width: 100%;
+  height: 100%;
   display: block;
 }
 .projects__link:hover, .projects__link:focus {
@@ -1532,26 +1539,23 @@ textarea {
 }
 
 .projects__desc {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-bottom: 20px;
   border-right: 1px solid var(--primary-grey-color);
   border-bottom: 1px solid var(--primary-grey-color);
   border-left: 1px solid var(--primary-grey-color);
 }
 
 .projects__subtitle {
-  margin-left: 24px;
   margin-top: 0;
   margin-bottom: 4px;
-  padding-top: 20px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: #212121;
-}
-
-.projects .text {
-  margin-left: 24px;
-  padding-bottom: 20px;
 }
 
 .projects__card {
@@ -1684,6 +1688,7 @@ textarea {
 }
 
 .subscribe [type=email] {
+  display: inline-block;
   width: 100%;
   height: 50px;
   padding: 0px 0px 0px 16px;
@@ -1699,6 +1704,11 @@ textarea {
 @media screen and (max-width: 1199px) {
   .subscribe [type=email] {
     margin-bottom: 20px;
+    width: 230px;
+  }
+}
+@media screen and (max-width: 1199px) and (min-width: 480px) {
+  .subscribe [type=email] {
     width: 450px;
   }
 }
@@ -1707,4 +1717,9 @@ textarea {
     width: 358px;
     height: 50px;
   }
+}
+
+.subscribe-email {
+  display: block;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
