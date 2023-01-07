@@ -13,16 +13,6 @@ img {
   text-decoration: none;
   font-style: normal;
   color: inherit;
-  // transition-property: color, background-color, box-shadow, transform;
-  // transition: color var(--std-timing) var(--std-time-func),
-  //   background-color var(--std-timing) var(--std-time-func),
-  //   box-shadow var(--std-timing) var(--std-time-func),
-  //   transform var(--std-timing) var(--std-time-func);
-
-  // &:hover,
-  // &:focus {
-  //   color: var(--accent-color);
-  // }
 }
 p {
   margin: 0;
@@ -31,3 +21,13 @@ p {
 .text {
   margin: 0;
 }
+// transition-property: color, background-color, box-shadow, transform;
+// transition: color var(--std-timing) var(--std-time-func),
+//   background-color var(--std-timing) var(--std-time-func),
+//   box-shadow var(--std-timing) var(--std-time-func),
+//   transform var(--std-timing) var(--std-time-func);
+
+// &:hover,
+// &:focus {
+//   color: var(--accent-color);
+// }

@@ -289,17 +289,6 @@ img {
   text-decoration: none;
   font-style: normal;
   color: inherit;
-  -webkit-transition-property: color, background-color, -webkit-box-shadow, -webkit-transform;
-  transition-property: color, background-color, -webkit-box-shadow, -webkit-transform;
-  transition-property: color, background-color, box-shadow, transform;
-  transition-property: color, background-color, box-shadow, transform, -webkit-box-shadow, -webkit-transform;
-  -webkit-transition: color var(--std-timing) var(--std-time-func), background-color var(--std-timing) var(--std-time-func), -webkit-box-shadow var(--std-timing) var(--std-time-func), -webkit-transform var(--std-timing) var(--std-time-func);
-  transition: color var(--std-timing) var(--std-time-func), background-color var(--std-timing) var(--std-time-func), -webkit-box-shadow var(--std-timing) var(--std-time-func), -webkit-transform var(--std-timing) var(--std-time-func);
-  transition: color var(--std-timing) var(--std-time-func), background-color var(--std-timing) var(--std-time-func), box-shadow var(--std-timing) var(--std-time-func), transform var(--std-timing) var(--std-time-func);
-  transition: color var(--std-timing) var(--std-time-func), background-color var(--std-timing) var(--std-time-func), box-shadow var(--std-timing) var(--std-time-func), transform var(--std-timing) var(--std-time-func), -webkit-box-shadow var(--std-timing) var(--std-time-func), -webkit-transform var(--std-timing) var(--std-time-func);
-}
-.link:hover, .link:focus {
-  color: var(--accent-color);
 }
 
 p {
@@ -384,6 +373,11 @@ p {
   }
 }
 
+.menu-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
 .menu-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -409,6 +403,11 @@ p {
   transition: var(--long-timing) var(--std-time-func), -webkit-transform var(--long-timing) var(--std-time-func);
   transition: transform var(--long-timing) var(--std-time-func), var(--long-timing) var(--std-time-func);
   transition: transform var(--long-timing) var(--std-time-func), var(--long-timing) var(--std-time-func), -webkit-transform var(--long-timing) var(--std-time-func);
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: none;
+  }
 }
 
 .menu-container.is-open {
@@ -618,7 +617,7 @@ p {
     padding-top: 32px;
     padding-bottom: 32px;
     font-weight: 500;
-    line-height: 1.1428571429;
+    line-height: 1.14;
     color: var(--primary-text-color);
   }
 }
@@ -668,9 +667,16 @@ p {
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
-  line-height: 1.1428571429;
+  line-height: 1.14;
+  font-style: normal;
   color: var(--secondary-text-color);
-  color: var(--secondary-text-color);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition: color var(--std-timing) var(--std-time-func);
+  transition: color var(--std-timing) var(--std-time-func);
+}
+.nav__link:hover, .nav__link:focus {
+  color: var(--accent-color);
 }
 
 .nav__link.current {
@@ -692,32 +698,49 @@ p {
 .hero {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1600px;
+  max-width: 767px;
+  height: 400px;
   background-color: #2f303a;
   text-align: center;
 }
+@media screen and (min-width: 769px) {
+  .hero {
+    max-width: 1200px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    height: 600px;
+  }
+}
 
 .hero__title {
-  max-width: 700px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 30px;
-  padding-top: 200px;
+  font-size: 26px;
+  line-height: 1.6153846154;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.3636363636;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-white-color);
 }
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    max-width: 700px;
+    font-size: 44px;
+    line-height: 1.3636363636;
+  }
+}
 
 .hero__overlay {
-  max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  padding-top: 118px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -752,6 +775,11 @@ p {
   .hero__overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-desktop.img@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-desktop.img@2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__overlay {
+    padding-top: 200px;
   }
 }
 
@@ -946,7 +974,6 @@ p {
   left: 50%;
   -webkit-transform: translateX(-50%) scale(1);
           transform: translateX(-50%) scale(1);
-  width: 450px;
   padding: 40px;
   -webkit-transition-property: -webkit-transform, -webkit-box-shadow;
   transition-property: -webkit-transform, -webkit-box-shadow;
@@ -961,9 +988,10 @@ p {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .modal {
     top: 15%;
+    min-width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {

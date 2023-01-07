@@ -9,7 +9,6 @@
   left: 50%;
   transform: translateX(-50%) scale(1);
 
-  width: 450px;
   padding: 40px;
   transition-property: transform, box-shadow;
   transition: transform var(--std-timing) var(--std-time-func),
@@ -20,8 +19,9 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 480px) {
     top: 15%;
+    min-width: 450px;
   }
 
   @media screen and (min-width: 1200px) {

@@ -29,7 +29,7 @@
   }
 }
 
-transition: color var(--std-timing) var(--std-time-func) .nav__link.current {
+.nav__link.current {
   position: relative;
   display: block;
   color: var(--accent-color);

@@ -6,19 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="preload"
-      href="./fonts/Roboto/Roboto-Regular.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin=""
-    />
-    -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -68,12 +55,10 @@
     <main>
       <section class="hero">
         <div class="hero__overlay">
-          <div class="container hero__text">
-            <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-            <button type="button" class="button order-button" data-modal-open>
-              Замовити послугу
-            </button>
-          </div>
+          <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
+          <button type="button" class="button order-button" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
       </section>
       <section class="section specialities">
@@ -857,78 +842,80 @@
         </div>
       </div>
     </div>
-    <div class="menu-container js-menu-container" id="mobile-menu">
-      <ul class="mobile-menu list">
-        <li class="mobile-menu__item">
-          <a href="./index.html" class="link mobile-menu__link current"
-            >Студія</a
-          >
-        </li>
-        <li class="mobile-menu__item">
-          <a href="./portfolio.html" class="link mobile-menu__link"
-            >Портфоліо</a
-          >
-        </li>
-        <li class="mobile-menu__item">
-          <a href="" class="link mobile-menu__link">Контакти</a>
-        </li>
-      </ul>
-      <ul class="mobile-menu__contacts list">
-        <li class="item tel">
-          <a href="tel:+380961111111" class="link"> +38 096 111 11 11</a>
-        </li>
-        <li class="item mail">
-          <a href="mailto:info@devstudio.com" class="link">
-            info@devstudio.com</a
-          >
-        </li>
-        <li class="item">
-          <ul class="mobile-menu__socials list">
-            <li class="mms-item">
-              <a
-                href=""
-                class="link"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Instagram</a
-              >
-            </li>
-            <li class="mms-item">
-              <a
-                href=""
-                class="link"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Twitter</a
-              >
-            </li>
-            <li class="mms-item">
-              <a
-                href=""
-                class="link"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Facebook</a
-              >
-            </li>
-            <li class="mms-item">
-              <a
-                href=""
-                class="link"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Linkedin</a
-              >
-            </li>
-          </ul>
-        </li>
-      </ul>
+    <div class="menu-thumb">
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <ul class="mobile-menu list">
+          <li class="mobile-menu__item">
+            <a href="./index.html" class="link mobile-menu__link current"
+              >Студія</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a href="./portfolio.html" class="link mobile-menu__link"
+              >Портфоліо</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a href="" class="link mobile-menu__link">Контакти</a>
+          </li>
+        </ul>
+        <ul class="mobile-menu__contacts list">
+          <li class="item tel">
+            <a href="tel:+380961111111" class="link"> +38 096 111 11 11</a>
+          </li>
+          <li class="item mail">
+            <a href="mailto:info@devstudio.com" class="link">
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="item">
+            <ul class="mobile-menu__socials list">
+              <li class="mms-item">
+                <a
+                  href=""
+                  class="link"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mms-item">
+                <a
+                  href=""
+                  class="link"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mms-item">
+                <a
+                  href=""
+                  class="link"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mms-item">
+                <a
+                  href=""
+                  class="link"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Linkedin</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
 
-      <button type="button" class="close-menu js-close-menu">
-        <svg class="cross">
-          <use class="cross" href="./images/icons/icons.svg#cross"></use>
-        </svg>
-      </button>
+        <button type="button" class="close-menu js-close-menu">
+          <svg class="cross">
+            <use class="cross" href="./images/icons/icons.svg#cross"></use>
+          </svg>
+        </button>
+      </div>
     </div>
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>

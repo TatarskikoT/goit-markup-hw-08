@@ -1,3 +1,7 @@
+.menu-thumb {
+  position: relative;
+  overflow: hidden;
+}
 .menu-container {
   display: flex;
   flex-direction: column;
@@ -12,6 +16,9 @@
   transition-property: transform;
   transition: transform var(--long-timing) var(--std-time-func),
     var(--long-timing) var(--std-time-func);
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .menu-container.is-open {
   display: flex;
