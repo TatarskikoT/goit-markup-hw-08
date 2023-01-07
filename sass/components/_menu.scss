@@ -9,13 +9,13 @@
 
   position: absolute;
   top: 48px;
-  right: -120%;
+  left: 120%;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   transition-property: transform;
-  transition: transform var(--long-timing) var(--std-time-func),
-    var(--long-timing) var(--std-time-func);
+  transition: transform var(--std-timing) var(--std-time-func),
+    var(--std-timing) var(--std-time-func);
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -25,7 +25,7 @@
   overflow: scroll;
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 48px;
@@ -58,6 +58,7 @@
 .item.tel {
   font-size: 34px;
   line-height: calc(40 / 34);
+  color: var(--accent-color);
 }
 .item.mail {
   font-size: 24px;

@@ -347,12 +347,13 @@ p {
 .section__title {
   margin: 0;
   margin-bottom: 30px;
+  font-weight: 700;
   font-size: 28px;
   line-height: 1.1666666667;
   text-align: center;
   color: var(--secondary-text-color);
 }
-@media screen and (min-width: 1200) {
+@media screen and (min-width: 1200px) {
   .section__title {
     margin-bottom: 50px;
     font-size: 36px;
@@ -391,7 +392,7 @@ p {
           justify-content: space-between;
   position: absolute;
   top: 48px;
-  right: -120%;
+  left: 120%;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -399,10 +400,10 @@ p {
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
-  -webkit-transition: var(--long-timing) var(--std-time-func), -webkit-transform var(--long-timing) var(--std-time-func);
-  transition: var(--long-timing) var(--std-time-func), -webkit-transform var(--long-timing) var(--std-time-func);
-  transition: transform var(--long-timing) var(--std-time-func), var(--long-timing) var(--std-time-func);
-  transition: transform var(--long-timing) var(--std-time-func), var(--long-timing) var(--std-time-func), -webkit-transform var(--long-timing) var(--std-time-func);
+  -webkit-transition: var(--std-timing) var(--std-time-func), -webkit-transform var(--std-timing) var(--std-time-func);
+  transition: var(--std-timing) var(--std-time-func), -webkit-transform var(--std-timing) var(--std-time-func);
+  transition: transform var(--std-timing) var(--std-time-func), var(--std-timing) var(--std-time-func);
+  transition: transform var(--std-timing) var(--std-time-func), var(--std-timing) var(--std-time-func), -webkit-transform var(--std-timing) var(--std-time-func);
 }
 @media screen and (min-width: 768px) {
   .menu-container {
@@ -417,7 +418,7 @@ p {
   overflow: scroll;
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 48px;
@@ -453,6 +454,7 @@ p {
 .item.tel {
   font-size: 34px;
   line-height: 1.1764705882;
+  color: var(--accent-color);
 }
 
 .item.mail {
@@ -808,14 +810,26 @@ p {
 }
 
 .order-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 10px 32px;
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  text-align: center;
   letter-spacing: 0.06em;
+}
+
+.hero-button {
+  display: inline-block;
 }
 
 .order-button .icon {
@@ -1160,6 +1174,8 @@ textarea {
 .specialities__subtitle {
   text-transform: uppercase;
   margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
   line-height: 1.1428571429;
   color: var(--secondary-text-color);
 }
@@ -1199,6 +1215,10 @@ textarea {
   .specialities__card {
     width: 270px;
   }
+}
+
+.specialities__text {
+  line-height: 1.7142857143;
 }
 
 .activity {
@@ -1556,7 +1576,11 @@ textarea {
 
 .footer {
   background-color: #2f303a;
-  text-align: center;
+}
+@media screen and (max-width: 1199px) {
+  .footer {
+    text-align: center;
+  }
 }
 
 .footer__container {
@@ -1584,8 +1608,11 @@ textarea {
     margin-bottom: 60px;
   }
 }
+.footer-logo {
+  margin-bottom: 20px;
+}
+
 .address {
-  margin-top: 20px;
   color: var(--primary-white-color);
 }
 
@@ -1633,19 +1660,26 @@ textarea {
 }
 
 .subscribe-thumb {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media screen and (min-width: 1200px) {
   .subscribe-thumb {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -1665,6 +1699,7 @@ textarea {
 @media screen and (max-width: 1199px) {
   .subscribe [type=email] {
     margin-bottom: 20px;
+    width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1672,9 +1707,4 @@ textarea {
     width: 358px;
     height: 50px;
   }
-}
-
-.address,
-.footer-contact {
-  display: inline-block;
 }/*# sourceMappingURL=main.css.map */
