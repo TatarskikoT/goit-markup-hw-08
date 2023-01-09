@@ -623,6 +623,13 @@ p {
     font-weight: 500;
     line-height: 1.14;
     color: var(--primary-text-color);
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition: color var(--std-timing) var(--std-time-func);
+    transition: color var(--std-timing) var(--std-time-func);
+  }
+  .header__link:hover, .header__link:focus {
+    color: var(--accent-color);
   }
 }
 .smartphone {
