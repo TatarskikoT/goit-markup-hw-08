@@ -14,8 +14,7 @@
   height: 100vh;
   overflow: hidden;
   transition-property: transform;
-  transition: transform var(--std-timing) var(--std-time-func),
-    var(--std-timing) var(--std-time-func);
+  transition: var(--std-timing) var(--std-time-func);
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -82,14 +81,21 @@
   min-width: 60px;
   text-align: center;
   line-height: calc(22 / 18);
-  @media screen and (min-width: 480px) {
-    font-size: 18px;
-  }
+
   @media screen and (max-width: 379.9px) {
     width: calc((100% - 4 * 10px) / 2);
   }
 }
-
+.mms-item .link {
+  font-weight: 500;
+  font-size: 16px;
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 379.9px) {
+    font-size: 7vw;
+  }
+}
 .mms-item:not(:nth-child(even))::after {
   content: "";
   position: absolute;

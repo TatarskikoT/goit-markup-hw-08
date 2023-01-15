@@ -5,6 +5,9 @@
   font-weight: 700;
   line-height: calc(16 / 14);
   color: var(--secondary-text-color);
+  @media screen and (max-width: 767.9px) {
+    text-align: center;
+  }
 }
 .icon-area {
   display: flex;
