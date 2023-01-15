@@ -76,6 +76,8 @@ textarea {
   display: inline-block;
   width: 16px;
   height: 15px;
+
+  min-width: 16px;
   margin-right: 8px;
 
   color: var(--primary-white-color);
